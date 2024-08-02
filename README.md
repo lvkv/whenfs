@@ -20,7 +20,7 @@ This is what the Mona Lisa looks like when uploaded to Google Calendar:
 ![calendar screenshot](images/calendar_screenshot.png)
 
 The image above contains all the image's data split up across hundreds of tiny calendar event descriptions.
-The entire filesystem—files, directories, reads, writes and more—is all based on manipulating Google Calendar events.
+The entire filesystem—files, directories, reads, writes and more—is all based on manipulating these Google Calendar events.
 
 WhenFS is an example of a [harder drive](http://tom7.org/harder/)—a hard drive we didn't want or need.
 
