@@ -1,8 +1,8 @@
 ![whenfs your calendar is now a filesystem](images/wordart-3.png)
 
-WhenFS turns your Google calendar into a FUSE filesystem. It whimsically supports the following features:
+WhenFS turns your Google Calendar into a FUSE filesystem. It whimsically supports the following features:
 
-- Create a filesystem out of existing Google calendars, or create a new one from scratch
+- Create a filesystem out of existing Google Calendars, or create a new one from scratch
 - Read and write files, directories and... well, just files and directories
 - Mount your friends' WhenFS calendar file systems to share files in the silliest way possible
 
@@ -18,6 +18,9 @@ This is what the Mona Lisa looks like when uploaded to Google Calendar:
 </p>
 
 ![calendar screenshot](images/calendar_screenshot.png)
+
+The image above contains all the image's data split up across hundreds of tiny calendar event descriptions.
+The entire filesystem—files, directories, reads, writes and more—is all based on manipulating Google Calendar events.
 
 WhenFS is an example of a [harder drive](http://tom7.org/harder/)—a hard drive we didn't want or need.
 
