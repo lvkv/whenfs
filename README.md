@@ -8,6 +8,15 @@ WhenFS turns your Google calendar into a FUSE filesystem. It whimsically support
 
 This is what the Mona Lisa looks like when uploaded to Google Calendar:
 
+<p align="center">
+  <br>
+  <img src="images/mona_lisa.jpg" /> .jpg
+</p>
+
+<p align="center">
+  ⬇️
+</p>
+
 ![calendar screenshot](images/calendar_screenshot.png)
 
 WhenFS is an example of a [harder drive](http://tom7.org/harder/)—a hard drive we didn't want or need.
