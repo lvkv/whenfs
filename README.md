@@ -24,6 +24,18 @@ The entire filesystem—files, directories, reads, writes and more—is all base
 
 WhenFS is an example of a [harder drive](http://tom7.org/harder/)—a hard drive we didn't want or need.
 
+## (Demo) Mount a Friend's File System
+
+WhenFS can mount existing WhenFS-ed Google Calendars when given the calendar's ID and ID of the file system recovery calendar event:
+
+![demo](images/demo_cat.gif)
+
+## (Demo) Transfer Files to Google Calendar
+
+WhenFS can transfer a 3 KiB file to Google Calendar in just over 7 seconds—a blistering upload speed of 400 bytes per second:
+
+![demo](images/demo.gif)
+
 ## How Does it Work?
 
 WhenFS operations start at the FUSE file system layer, facilitated by [fuser](https://github.com/cberner/fuser). The filesystem sits on top of a write-through object cache, which itself sits on top of an abstract data storage interface with swappable calendar API backends.
