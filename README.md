@@ -54,9 +54,9 @@ However, visitors should also note that that's okay. The best way to learn somet
 
 ## How Do I Use This?
 
-The diagram above took too long to create, so I no longer have the energy to write up a tutorial.
+The diagram above took too long to create, so I no longer have the energy to write up a tutorial. If you figure out how to use this, let me know.
 
-If you figure out how to use this, let me know.
+On a more serious note: Google Calendar is a wonderful service. I'd highly discourage anyone from using this for anything other than educational purposes. Abusing a free service is wrong—don't be evil.
 
 ## Contributions
 
