@@ -58,6 +58,36 @@ The diagram above took too long to create, so I no longer have the energy to wri
 
 On a more serious note: Google Calendar is a wonderful service. I'd highly discourage anyone from using this for anything other than educational purposes. Abusing a free service is wrong—don't be evil.
 
+## Usage
+### Compiling in Docker
+
+If you have docker installed, you can compile with the following command:
+
+```sh
+docker run -v `pwd`:/app --workdir="/app" --rm -it rust:1.80 bash -c "apt-get update && apt-get install -y libfuse3-dev && cargo build"
+```
+
+When it completes, you will have the binary available at: `target/debug/when-fs`
+
+### Setting Up
+
+Confirm the binary compiled correctly by running `target/debug/when-fs --help`. You should see output like this:
+
+```sh
+$ target/debug/when-fs --help
+Usage: when-fs [OPTIONS] --secret <SECRET>
+
+Options:
+      --mount <MOUNT>            
+      --secret <SECRET>          
+      --name <NAME>              
+      --calendar <CALENDAR>      
+      --root-event <ROOT_EVENT>  
+  -h, --help                     Print help
+```
+
+
+
 ## Contributions
 
 Contributions are more than welcome.
