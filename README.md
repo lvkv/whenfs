@@ -3,10 +3,10 @@
 WhenFS turns your Google Calendar into a FUSE filesystem. It whimsically supports the following features:
 
 - Create a filesystem out of existing Google Calendars, or create a new one from scratch
-- Read and write files, directories and... well, just files and directories
-- Mount your friends' WhenFS calendar file systems to share files in the silliest way possible
+- Read, write and create files and directories
+- Mount your friends' WhenFS calendar file systems to share files in the most timely way possible
 
-This is what the Mona Lisa looks like when uploaded to Google Calendar:
+This is what a filesystem containing a single image of the Mona Lisa looks like when uploaded to Google Calendar:
 
 <p align="center">
   <br>
@@ -19,10 +19,10 @@ This is what the Mona Lisa looks like when uploaded to Google Calendar:
 
 ![calendar screenshot](images/calendar_screenshot.png)
 
-The image above contains all the image's data split up across hundreds of tiny calendar event descriptions.
-The entire filesystem—files, directories, reads, writes and more—is all based on manipulating these Google Calendar events.
+The image above is a visual representation of how data can be split up and distributed across hundreds of calendar event descriptions and metadata fields.
+The entirety of a WhenFS filesystem—files, directories, reads, writes, attributes and more—is based on manipulating these calendar events.
 
-WhenFS is an example of a [harder drive](http://tom7.org/harder/)—a hard drive we didn't want or need.
+WhenFS is an example of a [harder drive](http://tom7.org/harder/)—a hard drive we don't want or need.
 
 ## (Demo) Mount a Friend's File System
 
@@ -40,7 +40,12 @@ WhenFS can transfer a 3 KiB file to Google Calendar in just over 7 seconds—a b
 
 WhenFS operations start at the FUSE file system layer, facilitated by [fuser](https://github.com/cberner/fuser). The filesystem sits on top of a write-through object cache, which itself sits on top of an abstract data storage interface with swappable calendar API backends.
 
-![flow](images/flow.png)
+```mermaid
+flowchart TD
+    A[FUSE filesystem] --> B[Write-through cache]
+    B --> C[Storage interface]
+    C --> D[Calendar API]
+```
 
 If you poke around enough, you'll likely run into bugs, edge cases, and completely unimplemented features. There are no plans to fix these.
 
@@ -52,11 +57,13 @@ Visitors interested in the code should note that this is an irredeemably messy c
 
 However, visitors should also note that that's okay. The best way to learn something new is to try it out for yourself—and creating a mess is a vital part of that process. The page you're on right now is my mess. Now go create yours!
 
-## How Do I Use This?
+## Usage
 
 The diagram above took too long to create, so I no longer have the energy to write up a tutorial. If you figure out how to use this, let me know.
 
-On a more serious note: Google Calendar is a wonderful service. I'd highly discourage anyone from using this for anything other than educational purposes. Abusing a free service is wrong—don't be evil.
+On a more serious note: Google Calendar is a wonderful service. Users are strongly advised against utilizing WhenFS for storing anything beyond a minimal amount of data or for purposes outside of educational use. 
+
+Abusing a free service is wrong—don't be evil.
 
 ## Contributions
 
